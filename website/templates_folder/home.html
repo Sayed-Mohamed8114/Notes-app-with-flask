@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% block title %}Home Page{% endblock %} {% block body
+%}
+
+<div class="container mt-4">
+  <h1 class="text-center mb-4">Your Notes</h1>
+
+  <!-- Add Note Form -->
+  <form method="POST" class="mb-4">
+    <div class="form-group">
+      <textarea
+        name="note"
+        id="note"
+        class="form-control"
+        rows="3"
+        placeholder="Add a new note..."
+      ></textarea>
+    </div>
+    <div class="text-center mt-2">
+      <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+  </form>
+
+  <!-- Notes List -->
+  <ul class="list-group">
+    {% for note in current_user.notes %}
+    <li class="list-group-item">
+      <!-- Combined Form for Update and Delete -->
+      <form method="POST" class="note-form">
+        <!-- Note Input -->
+        <input
+          type="text"
+          name="note"
+          value="{{ note.data }}"
+          class="form-control mb-2"
+        />
+
+        <!-- Buttons Side by Side -->
+        <div class="buttons">
+          <!-- Update Button -->
+          <button
+            type="submit"
+            formaction="{{ url_for('auth.update_note', note_id=note.id) }}"
+            class="btn btn-update"
+          >
+            Update
+          </button>
+
+          <!-- Delete Button -->
+          <button
+            type="submit"
+            formaction="{{ url_for('auth.delete_note', note_id=note.id) }}"
+            class="btn btn-delete"
+          >
+            Delete
+          </button>
+        </div>
+      </form>
+    </li>
+    {% else %}
+    <li class="list-group-item text-muted">No notes yet.</li>
+    {% endfor %}
+  </ul>
+
+  {% endblock %}
+</div>

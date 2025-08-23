@@ -1,0 +1,63 @@
+{%extends 'base.html'%} {%block title%}Sign-up{%endblock%} {%block body%}
+<div class="login-container">
+  <h1>Create Account</h1>
+  <form method="POST" action="/signup">
+    <div class="input-group">
+      <label for="fullname">Full name</label>
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        placeholder="Enter your full name"
+        required
+      />
+    </div>
+    <div class="input-group">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your E-mail"
+        required
+      />
+    </div>
+    <div class="input-group">
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="tel"
+        name="tel"
+        placeholder="Enter your phone number"
+        required
+      />
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        required
+      />
+    </div>
+    <div class="input-group">
+      <label for="password2">Confrim password</label>
+      <input
+        type="password"
+        id="password2"
+        name="password2"
+        placeholder="Please confrim your password"
+        required
+      />
+    </div>
+    <button type="submit">Sign-up</button>
+  </form>
+  <div class="signup-link">
+    <p>
+      Already have an accout? <a href="{{ url_for('auth.login') }}">Login</a>
+    </p>
+  </div>
+</div>
+{%endblock%}
