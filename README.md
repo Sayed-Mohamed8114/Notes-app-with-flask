@@ -5,7 +5,7 @@ A simple web application built with **Flask** that allows users to sign up, log 
 ---
 
 ## 🚀 Features
-
+- good design with pure css and html
 - User authentication (Sign Up / Login / Logout)
 - Secure password hashing
 - Add, update, and delete notes
@@ -14,3 +14,6 @@ A simple web application built with **Flask** that allows users to sign up, log 
 - SQLite database support
 
 ---
+## about the project 
+### login page 
+![login page](assets/login.png)
