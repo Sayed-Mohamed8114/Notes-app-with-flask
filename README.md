@@ -19,7 +19,7 @@ A simple web application built with **Flask** that allows users to sign up, log 
 ![login page](assets/login.png)
 
 ### Sign-up Page 
-![login page]("assets/sign_up.png")
+![sign_up page](assets/sign_up.png)
 
 ### Home Page
-![login page](assets/home.png)
+![home page](assets/home.png)
