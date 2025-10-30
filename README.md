@@ -14,9 +14,12 @@ A simple web application built with **Flask** that allows users to sign up, log 
 - SQLite database support
 
 ---
-## about the project 
-### login page 
+## About the project 
+### Login page 
 ![login page](assets/login.png)
 
-### sign up page 
-![login page](assets/sign%1up.png)
+### Sign-up Page 
+![login page](assets/sign up.png)
+
+### Home Page
+![login page](assets/home.png)
